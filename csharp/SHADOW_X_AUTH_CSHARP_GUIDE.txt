@@ -1,0 +1,40 @@
+========================================================================
+            SHADOW X AUTH - C# (.NET 6/7/8/9 / AOT) SETUP GUIDE
+========================================================================
+Copyright (c) 2026 Shadow X Auth. All Rights Reserved.
+
+HOW TO INTEGRATE SHADOW X AUTH IN YOUR C# WINFORMS / WPF / CONSOLE APP:
+
+STEP 1: Copy `ShadowXAuth.cs` into your Visual Studio C# Project.
+STEP 2: In Visual Studio, Solution Explorer -> Right-click -> Add Existing Item -> Select `ShadowXAuth.cs`.
+STEP 3: In your Form or Main class, initialize the SDK:
+
+   using System;
+   using ShadowXAuthSDK;
+
+   class Program
+   {
+       static void Main()
+       {
+           var auth = new ShadowXAuth("YOUR_APP_OWNER_ID", "YOUR_APP_SECRET", "1.0");
+
+           Console.Write("Enter License Key: ");
+           string key = Console.ReadLine();
+
+           var result = auth.ValidateLicense(key);
+           if (result.Success)
+           {
+               Console.WriteLine($"[+] Access Granted! Welcome {result.Username}");
+               Console.WriteLine($"[+] Days Remaining: {result.DaysLeft}");
+           }
+           else
+           {
+               Console.WriteLine($"[-] Access Denied: {result.Message}");
+           }
+       }
+   }
+
+========================================================================
+Official SDK Repository: https://github.com/imranchowdhury3448-bit/SHADOW-X-AUTH-ALL-CS-FILE-
+Discord Support: https://discord.gg/WwHrs5RVS
+========================================================================

@@ -1,0 +1,14 @@
+========================================================================
+                  SHADOW X AUTH - OFFICIAL SDK NOTICE
+========================================================================
+Copyright (c) 2026 Shadow X Auth. All Rights Reserved.
+
+This SDK library and implementation code are official assets of the
+Shadow X Auth Licensing & Security Infrastructure.
+
+Official GitHub SDK Repository:
+https://github.com/imranchowdhury3448-bit/SHADOW-X-AUTH-ALL-CS-FILE-
+
+Community & Technical Support:
+https://discord.gg/WwHrs5RVS
+========================================================================

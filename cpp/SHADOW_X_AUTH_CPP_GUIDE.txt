@@ -1,0 +1,31 @@
+========================================================================
+             SHADOW X AUTH - C++ IMPLEMENTATION & SETUP GUIDE
+========================================================================
+Copyright (c) 2026 Shadow X Auth. All Rights Reserved.
+
+HOW TO INTEGRATE SHADOW X AUTH IN YOUR C++ / WIN32 / VISUAL STUDIO PROJECT:
+
+STEP 1: Copy `shadowxauth.cpp` and `shadowxauth.h` into your project directory.
+STEP 2: In Visual Studio, right-click project -> Add Existing Item -> Select `shadowxauth.cpp` and `shadowxauth.h`.
+STEP 3: Open your main application file (e.g. `main.cpp`) and include the header:
+   #include "shadowxauth.h"
+
+STEP 4: Initialize Shadow X Auth with your App Credentials from your Dashboard:
+   ShadowXAuth auth("YOUR_APP_OWNER_ID", "YOUR_APP_SECRET", "1.0");
+
+STEP 5: Validate License Key:
+   std::string licenseKey = "SXA-XXXX-XXXX-XXXX";
+   auto response = auth.validateLicense(licenseKey);
+
+   if (response.success) {
+       std::cout << "License Valid! Welcome " << response.username << std::endl;
+       // Launch your cheat/software main feature code here!
+   } else {
+       std::cout << "Authentication Failed: " << response.message << std::endl;
+       exit(1);
+   }
+
+========================================================================
+Official SDK Repository: https://github.com/imranchowdhury3448-bit/SHADOW-X-AUTH-ALL-CS-FILE-
+Discord Support: https://discord.gg/WwHrs5RVS
+========================================================================

@@ -1,0 +1,30 @@
+========================================================================
+             SHADOW X AUTH - PYTHON INTEGRATION & SETUP GUIDE
+========================================================================
+Copyright (c) 2026 Shadow X Auth. All Rights Reserved.
+
+HOW TO INTEGRATE SHADOW X AUTH IN YOUR PYTHON APPLICATION:
+
+STEP 1: Copy `shadowxauth.py` into your Python project directory.
+STEP 2: Import and initialize in your script:
+
+   from shadowxauth import ShadowXAuth
+
+   auth = ShadowXAuth(
+       app_owner_id="YOUR_APP_OWNER_ID",
+       app_secret="YOUR_APP_SECRET",
+       version="1.0"
+   )
+
+   license_key = input("Enter License Key: ")
+   result = auth.validate_license(license_key)
+
+   if result.get("success"):
+       print(f"[+] Access Granted! Welcome {result.get('username')}")
+   else:
+       print(f"[-] Access Denied: {result.get('message')}")
+
+========================================================================
+Official SDK Repository: https://github.com/imranchowdhury3448-bit/SHADOW-X-AUTH-ALL-CS-FILE-
+Discord Support: https://discord.gg/WwHrs5RVS
+========================================================================
