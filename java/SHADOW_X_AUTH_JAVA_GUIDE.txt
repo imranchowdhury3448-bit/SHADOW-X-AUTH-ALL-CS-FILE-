@@ -1,0 +1,35 @@
+========================================================================
+             SHADOW X AUTH - JAVA IMPLEMENTATION & SETUP GUIDE
+========================================================================
+Copyright (c) 2026 Shadow X Auth. All Rights Reserved.
+
+HOW TO INTEGRATE SHADOW X AUTH IN YOUR JAVA PROJECT:
+
+STEP 1: Copy `ShadowXAuth.java` into your src/ main package folder.
+STEP 2: Import and initialize in your Main class:
+
+   import com.shadowxauth.ShadowXAuth;
+
+   public class App {
+       public static void main(String[] args) {
+           ShadowXAuth auth = new ShadowXAuth(
+               "YOUR_APP_NAME",
+               "YOUR_APP_OWNER_ID",
+               "YOUR_APP_SECRET",
+               "1.0"
+           );
+
+           String key = "SXA-XXXX-XXXX";
+           var res = auth.validateLicense(key);
+           if (res.isSuccess()) {
+               System.out.println("Access Granted! Welcome " + res.getUsername());
+           } else {
+               System.out.println("Access Denied: " + res.getMessage());
+           }
+       }
+   }
+
+========================================================================
+Official SDK Repository: https://github.com/imranchowdhury3448-bit/SHADOW-X-AUTH-ALL-CS-FILE-
+Discord Support: https://discord.gg/WwHrs5RVS
+========================================================================

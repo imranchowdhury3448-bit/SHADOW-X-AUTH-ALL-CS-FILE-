@@ -1,0 +1,34 @@
+========================================================================
+            SHADOW X AUTH - NODE.JS IMPLEMENTATION & SETUP GUIDE
+========================================================================
+Copyright (c) 2026 Shadow X Auth. All Rights Reserved.
+
+HOW TO INTEGRATE SHADOW X AUTH IN YOUR NODE.JS APPLICATION:
+
+STEP 1: Copy `shadowxauth.js` into your project directory.
+STEP 2: Import and initialize in your main server/script file:
+
+   const ShadowXAuth = require('./shadowxauth');
+
+   const auth = new ShadowXAuth({
+       name:    'YOUR_APP_NAME',
+       ownerid: 'YOUR_APP_OWNER_ID',
+       secret:  'YOUR_APP_SECRET',
+       version: '1.0'
+   });
+
+   async function run() {
+       const result = await auth.login('username', 'password', 'hwid');
+       if (result.success) {
+           console.log(`Access Granted! Welcome ${result.username}`);
+       } else {
+           console.log(`Access Denied: ${result.message}`);
+       }
+   }
+
+   run();
+
+========================================================================
+Official SDK Repository: https://github.com/imranchowdhury3448-bit/SHADOW-X-AUTH-ALL-CS-FILE-
+Discord Support: https://discord.gg/WwHrs5RVS
+========================================================================
